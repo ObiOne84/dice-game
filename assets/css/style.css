@@ -23,7 +23,7 @@ p {
     height: 10%;
     text-align: center;
     font-size: 200%;
-    margin: 5px auto;
+    margin: 2.5% auto;
 }
 
 #logo img {
@@ -34,13 +34,14 @@ p {
 #game-area {
     height: 30vw;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 2.5%;
+    background-color: darkcyan;
 }
 
 #game-box {
     height: 100%;
     width: 90%;
-    margin: 10% auto;
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -51,23 +52,6 @@ p {
     display: flex;
     justify-content: center;
 }
-
-
-/* #dice-one {
-    background-color: blue;
-}
-
-#dice-two {
-    background-color: red;
-}
-
-#dice-three {
-    background-color: yellow;
-}
-
-#dice-four {
-    background-color: green;
-} */
 
 .holder img {
     width: 90%;
@@ -88,4 +72,29 @@ p {
     border-radius: 15px;
     text-align: center;
     font-weight: bold;
+}
+
+/* Add style to score area */
+
+#results-area {
+    height: 20vw;
+}
+
+#score-holder {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.score-boxes {
+    width: 40%;
+    text-align: center;
+}
+
+#muton-button {
+    width: 20%;
+    text-align: center;
 }
