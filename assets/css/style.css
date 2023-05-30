@@ -32,26 +32,28 @@ p {
 
 /* Style game area */
 #game-area {
-    height: 60%;
+    height: 30vw;
     width: 100%;
     margin-top: 10%;
 }
 
 #game-box {
     height: 100%;
-    width: 95%;
+    width: 90%;
     margin: 10% auto;
     display: flex;
     flex-direction: row;
-    margin: 0 2.5%;
+    justify-content: space-around;
 }
 
 .holder {
     width: 22.5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-#dice-one {
+
+/* #dice-one {
     background-color: blue;
 }
 
@@ -65,14 +67,25 @@ p {
 
 #dice-four {
     background-color: green;
-}
+} */
 
 .holder img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
     object-fit: contain;
+    margin-top: 2.5%;
 }
 
 #roll-button {
-    margin: 2.5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+#roll-button>button {
+    font-size: 100%;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
 }
