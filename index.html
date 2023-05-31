@@ -20,11 +20,12 @@
 
     <section id="game-area">
         <div id="game-box">
-            <div class="holder" id="dice-one"><img src="assets/images/dice-four.png"></div>
-            <div class="holder" id="dice-two"><img src="assets/images/dice-six.png"></div>
-            <div id="roll-button"><button>Roll Dice!</button></div>
-            <div class="holder" id="dice-three"><img src="assets/images/dice-five.png"></div>
-            <div class="holder" id="dice-four"><img src="assets/images/dice-six.png"></div>
+            <div class="holder" id="dice-one"><img src="assets/images/dice4.png"></div>
+            <div class="holder" id="dice-two"><img src="assets/images/dice6.png"></div>
+            <div id="roll-button"><button onclick="rollTheDice()" type="button" id="roll">Roll Dice!</button>
+            </div>
+            <div class="holder" id="dice-three"><img src="assets/images/dice5.png"></div>
+            <div class="holder" id="dice-four"><img src="assets/images/dice3.png"></div>
         </div>
     </section>
 
@@ -33,7 +34,9 @@
             <div class="score-boxes" id="player-area">
                 <h2><span id="palyer-score">0</span><br><span id="player-name">Player</span><br>Win</h2>
             </div>
-            <div id="mute-button">Mute button goes here.</div>
+            <div id="mute-button">
+                <h3>Message Here</h3>
+            </div>
             <div class="score-boxes" s id="cpu-area">
                 <h2><span id="cpu-score">0</span><br>CPU<br>Win</h2>
             </div>
