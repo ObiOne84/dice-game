@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.getAttribute("id") === "roll-dice") {
             // alert("You clicked roll dice!");
             rollTheDice();
-            // try with the return the roll dice
+            // displayTheWinner();
+
+
         }
     });
 });
@@ -55,11 +57,34 @@ function rollTheDice() {
     let sumPlayer = num1 + num2;
     let sumCpu = num3 + num4;
 
+    displayTheRollResult(sumPlayer, sumCpu);
+    displayTheWinner(sumPlayer, sumCpu);
+
+    // document.getElementById("player-field").innerText = `Player One score ${num1 + num2} points!`;
+    // document.getElementById("cpu-field").innerText = `The CPU score ${sumCpu} points!`;
+
+    // if (sumPlayer === sumCpu) {
+    //     return document.getElementById("message").innerHTML = "DRAW!";
+    // } else if (sumPlayer > sumCpu) {
+    //     return document.getElementById("message").innerHTML = "Player WINS!";
+    // } else {
+    //     return document.getElementById("message").innerHTML = "CPU WINS!";
+    // }
+}
+
+function displayTheRollResult(sumPlayer, sumCpu) {
+    document.getElementById("player-field").innerText = `Player One score ${sumPlayer} points!`;
+    document.getElementById("cpu-field").innerText = `The CPU score ${sumCpu} points!`;
+}
+
+function displayTheWinner(sumPlayer, sumCpu) {
     if (sumPlayer === sumCpu) {
-        document.getElementById("message").innerHTML = "DRAW!";
+        return document.getElementById("message").innerHTML = "DRAW!";
     } else if (sumPlayer > sumCpu) {
-        document.getElementById("message").innerHTML = "Player WINS!";
+        return document.getElementById("message").innerHTML = "Player WINS!";
     } else {
-        document.getElementById("message").innerHTML = "CPU WINS!";
+        return document.getElementById("message").innerHTML = "CPU WINS!";
     }
 }
+
+
