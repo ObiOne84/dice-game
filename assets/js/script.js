@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.getAttribute("id") === "roll-dice") {
             // alert("You clicked roll dice!");
             rollTheDice();
+            // try with the return the roll dice
         }
     });
 });
@@ -33,22 +34,22 @@ function rollTheDice() {
 
     let num1 = Math.floor(Math.random() * 6) + 1;
     let image1 = new Image();
-    image1.src = "assets/images/dice" + num1 + ".png";
+    image1.src = "./assets/images/dice-" + num1 + ".png";
     document.getElementsByTagName("img")[1].replaceWith(image1);
 
     let num2 = Math.floor(Math.random() * 6) + 1;
     let image2 = new Image();
-    image2.src = "assets/images/dice" + num2 + ".png";
+    image2.src = "./assets/images/dice-" + num2 + ".png";
     document.getElementsByTagName("img")[2].replaceWith(image2);
 
     let num3 = Math.floor(Math.random() * 6) + 1;
     let image3 = new Image();
-    image3.src = "assets/images/dice" + num3 + ".png";
+    image3.src = "./assets/images/dice-" + num3 + ".png";
     document.getElementsByTagName("img")[3].replaceWith(image3);
 
     let num4 = Math.floor(Math.random() * 6) + 1;
     let image4 = new Image();
-    image4.src = "assets/images/dice" + num4 + ".png";
+    image4.src = "./assets/images/dice-" + num4 + ".png";
     document.getElementsByTagName("img")[4].replaceWith(image4);
 
     let sumPlayer = num1 + num2;
