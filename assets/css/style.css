@@ -79,8 +79,6 @@ p {
     align-items: center;
     flex-direction: column;
     height: 90%;
-    margin-bottom: 15px;
-
 }
 
 #restart,
@@ -124,9 +122,13 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 1% auto;
+    margin: 15px auto;
     border-bottom: 1px solid darkcyan;
     height: 10%;
+}
+
+.dice-roll-result {
+    font-size: 80%;
 }
 
 #score-holder {
@@ -160,3 +162,58 @@ p {
     font-size: 150%;
     color: darkred;
 }
+
+/* media query */
+
+/* for screen size 1024px and below */
+@media screen and (max-width: 1024px) {
+
+    #roll-dice,
+    #restart,
+    #exit {
+        font-size: 90%;
+        height: 40px;
+        width: 80px;
+        border-radius: 7.5px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #results-message {
+        margin: 0;
+        padding: 15px;
+    }
+}
+
+/* for screen size 750px and below */
+/* @media screen and (max-width: 750px) {
+    #logo {
+        font-size: 160%;
+    }
+
+    #logo img {
+        height: 52px;
+    }
+
+    #results-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 15%;
+        padding: 30px;
+    }
+
+    #message-box {
+        width: 30%;
+        font-size: 150%;
+        padding: 15px;
+    }
+
+    .score-boxes {
+        width: 35%;
+        text-align: center;
+        font-size: 80%;
+    }
+} */
