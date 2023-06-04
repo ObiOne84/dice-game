@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Function rolls the dices by replacing images and displays the message of the winner
+ * Function replace images by generating random number between one and six
  */
 function rollTheDice() {
 
@@ -47,11 +47,10 @@ function rollTheDice() {
     let num3 = Math.floor(Math.random() * 6) + 1;
     let image3 = new Image();
     image3.src = "./assets/images/dice-" + num3 + ".png";
-    document.getElementsByTagName("img")[3].replaceWith(image3);
-
     let num4 = Math.floor(Math.random() * 6) + 1;
     let image4 = new Image();
     image4.src = "./assets/images/dice-" + num4 + ".png";
+    document.getElementsByTagName("img")[3].replaceWith(image3);
     document.getElementsByTagName("img")[4].replaceWith(image4);
 
     let sumPlayer = num1 + num2;

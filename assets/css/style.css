@@ -6,6 +6,10 @@
     border: none;
 }
 
+body {
+    color: darkslategrey;
+}
+
 h1 {
     font-family: Montserrat, sans-serif;
 }
@@ -77,16 +81,26 @@ p {
 /* Add style to score area */
 
 #results-area {
-    height: 20vw;
+    height: 30vw;
+}
+
+#results-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1% auto;
+    border-bottom: 1px solid darkcyan;
+    height: 10%;
 }
 
 #score-holder {
     width: 90%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-left: 5%;
+    text-transform: uppercase;
 }
 
 .score-boxes {
@@ -97,4 +111,16 @@ p {
 #mute-button {
     width: 20%;
     text-align: center;
+    font-size: 200%;
+    color: darkslategrey;
+}
+
+#palyer-score {
+    font-size: 150%;
+    color: darkgreen;
+}
+
+#cpu-score {
+    font-size: 150%;
+    color: darkred;
 }
