@@ -187,7 +187,7 @@ p {
 }
 
 /* for screen size 750px and below */
-/* @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
     #logo {
         font-size: 160%;
     }
@@ -216,4 +216,4 @@ p {
         text-align: center;
         font-size: 80%;
     }
-} */
+}
