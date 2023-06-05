@@ -255,7 +255,7 @@ p {
 /* for screen size 750px and below */
 @media screen and (max-width: 750px) {
     #logo {
-        font-size: 160%;
+        font-size: 150%;
     }
 
     #logo img {
@@ -282,6 +282,35 @@ p {
     .score-boxes {
         width: 35%;
         text-align: center;
+        font-size: 80%;
+    }
+}
+
+/* for screen size 425px and below */
+@media screen and (max-width: 425px) {
+
+    #logo {
+        font-size: 120%;
+    }
+
+    #logo img {
+        height: 40px;
+    }
+
+    #left,
+    #right {
+        font-size: 1.25rem;
+    }
+
+    .holder img {
+        height: 140px;
+    }
+
+    #results-message {
+        font-size: 80%;
+    }
+
+    #score-holder {
         font-size: 80%;
     }
 }
