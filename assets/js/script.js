@@ -91,7 +91,11 @@ function incrementPlayerScore() {
     let playerScore = parseInt(document.getElementById("palyer-score").innerText);
     document.getElementById("palyer-score").innerText = ++playerScore;
     if (playerScore === 11) {
-        alert("you win"); // add function to reset the score and restart the game
+        // alert("you win"); // add function to reset the score and restart the game
+        let winnerMessage = document.getElementById("end-game-message");
+        winnerMessage.style.display = "block";
+
+        // displayWinnerMessage();
     }
 }
 
@@ -114,3 +118,6 @@ function incrementCpuScore() {
 //     }
 // }
 
+function displayWinnerMessage() {
+    document.getElementById("end-game-note").innerHTML = "Congratulation! You win!";
+}
