@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 rollTheDice();
             } else if (this.getAttribute("id") === "restart") {
                 resetTheScore();
-                // alert("You clicked restart button");
             } else if (this.getAttribute("id") === "exit") {
                 alert("You clicked exit button");
             } else if (this.getAttribute("id") === "button-one") {
-                alert("You clicked play again");
+                returnToTheGame();
+                resetTheScore();
+                // alert("You clicked play again");
             } else if (this.getAttribute("id") === "button-two") {
-                alert("You clicked play again");
+                returnToTheGame();
+                resetTheScore();
+                // alert("You clicked play again");
             }
         });
     }
@@ -132,16 +135,30 @@ function displayWinnerMessage() {
  * Function display the message for the player who lost the game but unhiding the div
  */
 function displayLooserMessage() {
-    let winnerMessage = document.getElementById("looser");
-    winnerMessage.style.display = "block";
+    let looserMessage = document.getElementById("looser");
+    looserMessage.style.display = "block";
 }
 
 /**
- * This function will reset the score for player and the computer
+ * This function will reset the score, and clear all messages
  */
 function resetTheScore() {
     let cpuScore = document.getElementById("cpu-score");
-    cpuScore.innerHTML = "0";
     let playerScore = document.getElementById("palyer-score");
+    cpuScore.innerHTML = "0";
     playerScore.innerHTML = "0";
+    document.getElementById("player-field").innerText = "";
+    document.getElementById("cpu-field").innerText = "";
+    document.getElementById("message").innerHTML = "";
+}
+
+/** 
+ * Function will unhide the message for the winner and allow to return to the game
+ */
+
+function returnToTheGame() {
+    let winnerMessage = document.getElementById("winner");
+    winnerMessage.style.display = "none";
+    let looserMessage = document.getElementById("looser");
+    looserMessage.style.display = "none";
 }
