@@ -200,7 +200,7 @@ p {
     right: 0;
     height: 100%;
     width: 100%;
-    display: none;
+    /* display: none; */
     text-align: center;
     letter-spacing: 2px;
     /* color: yellow; */
@@ -217,11 +217,7 @@ p {
 
 #new-game {
     margin-top: 15px;
-    background-color: #ffed8f;
-}
-
-#reward {
-    /* border: 1px solid white; */
+    /* background-color: #ffed8f; */
 }
 
 /* media query */
@@ -323,6 +319,15 @@ p {
         text-align: center;
         font-size: 80%;
     }
+
+    #reward {
+        width: 160px;
+    }
+
+    #winner-note {
+        margin-top: 25vh;
+        font-size: 140%;
+    }
 }
 
 /* for screen size 425px and below */
@@ -351,5 +356,15 @@ p {
 
     #score-holder {
         font-size: 80%;
+    }
+
+    #reward {
+        width: 120px;
+    }
+
+    #winner-note {
+        margin-top: 28vh;
+        font-size: 110%;
+        padding: 0 15px;
     }
 }
