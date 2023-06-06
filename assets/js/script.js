@@ -1,30 +1,40 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
-// document.addEventListener("DOMContentLoaded", function () {
-//     let buttons = document.getElementsByTagName("button");
-
-//     for (let button of buttons) {
-//         button.addEventListener("click", function () {
-//             if (this.getAttribute("id") === "roll-dice") {
-//                 alert("You clicked roll dice!");
-//             } else {
-//                 let gameType = this.getAttribute("id");
-//                 alert(`You clicked ${gameType}`);
-//             }
-//         });
-//     }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
-    let rollDice = document.getElementById("roll-dice");
+    let buttons = document.getElementsByTagName("button");
 
-    rollDice.addEventListener("click", function () {
-        if (this.getAttribute("id") === "roll-dice") {
-            // alert("You clicked roll dice!");
-            rollTheDice();
-        }
-    });
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("id") === "roll-dice") {
+                rollTheDice();
+            } else if (this.getAttribute("id") === "restart") {
+                alert("You clicked restart button");
+            } else if (this.getAttribute("id") === "exit") {
+                alert("You clicked exit button");
+            } else if (this.getAttribute("id") === "button-one") {
+                alert("You clicked play again");
+            } else if (this.getAttribute("id") === "button-two") {
+                alert("You clicked play again");
+            }
+        });
+    }
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     let rollDice = document.getElementById("roll-dice");
+
+//     rollDice.addEventListener("click", function () {
+//         if (this.getAttribute("id") === "roll-dice") {
+//             rollTheDice();
+//         } else if (this.getAttribute("id") === "restart") {
+//             alert("You clicked restart button");
+//         } else if (this.getAttribute("id") === "exit") {
+//             alert("You clicked exit button");
+//         } else if (this.getAttribute("class") === "play-again") {
+//             alert("You clicked play again");
+//         }
+//     });
+// });
 
 /**
  * Function replace images by generating random number between one and six
@@ -72,6 +82,7 @@ function displayTheRollResult(sumPlayer, sumCpu) {
     document.getElementById("cpu-field").innerText = `CPU scored ${sumCpu} points!`;
 }
 
+
 function displayTheWinner(sumPlayer, sumCpu) {
     if (sumPlayer === sumCpu) {
         return document.getElementById("message").innerHTML = "DRAW!";
@@ -91,11 +102,7 @@ function incrementPlayerScore() {
     let playerScore = parseInt(document.getElementById("palyer-score").innerText);
     document.getElementById("palyer-score").innerText = ++playerScore;
     if (playerScore === 11) {
-        // alert("you win"); // add function to reset the score and restart the game
-        let winnerMessage = document.getElementById("end-game-message");
-        winnerMessage.style.display = "block";
-
-        // displayWinnerMessage();
+        displayWinnerMessage();
     }
 }
 
@@ -106,18 +113,22 @@ function incrementCpuScore() {
     let cpuScore = parseInt(document.getElementById("cpu-score").innerText);
     document.getElementById("cpu-score").innerText = ++cpuScore;
     if (cpuScore === 11) {
-        alert("you loose"); // add function to reset the score and restart the game
+        displayLooserMessage();
     }
 }
 
-// function gameResult(playerScore, cpuScore) {
-//     if (playerScore === 11) {
-//         return alert("you win!");
-//     } else if (cpuScore === 11) {
-//         alert("you loose");
-//     }
-// }
-
+/**
+ * Function display the message for the player who won the game but unhiding the div
+ */
 function displayWinnerMessage() {
-    document.getElementById("end-game-note").innerHTML = "Congratulation! You win!";
+    let winnerMessage = document.getElementById("winner");
+    winnerMessage.style.display = "block";
+}
+
+/**
+ * Function display the message for the player who lost the game but unhiding the div
+ */
+function displayLooserMessage() {
+    let winnerMessage = document.getElementById("looser");
+    winnerMessage.style.display = "block";
 }

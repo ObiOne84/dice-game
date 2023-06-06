@@ -11,12 +11,13 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div id="logo">
             <h1><img src="assets/images/roll-dice-icon.png" alt="logo"> ROLL DICES GAME!</h1>
         </div>
     </header>
-
+    <!-- Game area -->
     <section id="game-area">
         <span id="left">Player</span>
         <span id="right">CPU</span>
@@ -31,25 +32,31 @@
             </div>
         </div>
     </section>
-
+    <!-- Winner and looser message area -->
     <section>
         <div id="game-over">
-            <div id="end-game-message">
-                <h2 id="winner-note"><img src="assets/images/trophy-1.png" alt="Winner reward"
-                        id="reward"><br>Congratulation! You won!</h2>
-                <button class="play-again" id="new-game">New game!</button>
+            <div class="end-game-message" id="winner">
+                <h2 class="message-to-player"><img src="assets/images/trophy.png" alt="Winner trophy cup."
+                        class="reward"><br>Congratulation! You won!</h2>
+                <button class="buttons play-again" id="button-one">New game!</button>
+            </div>
+            <div class="end-game-message" id="looser">
+                <h2 class="message-to-player"><img src="assets/images/medal.png" alt="Looser medal."
+                        class="reward"><br>You
+                    loose! Better luck next time!</h2>
+                <button class="buttons play-again" id="button-two">New game!</button>
             </div>
         </div>
     </section>
-
+    <!-- Control area -->
     <section id="control-area">
         <div id="control-box">
-            <div><button id="restart">Restart</button></div>
-            <div id="roll-button"><button id="roll-dice">Roll Dice!</button></div>
-            <div><button id="exit">Exit</button></div>
+            <div><button class="buttons" id="restart">Restart</button></div>
+            <div id="roll-button"><button class="buttons" id="roll-dice">Roll Dice!</button></div>
+            <div><button class="buttons" id="exit">Exit</button></div>
         </div>
     </section>
-
+    <!-- Result area -->
     <section id="results-area">
         <div id="results-message">
             <div class="dice-roll-result">
