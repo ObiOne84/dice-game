@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("id") === "roll-dice") {
                 rollTheDice();
             } else if (this.getAttribute("id") === "restart") {
-                alert("You clicked restart button");
+                resetTheScore();
+                // alert("You clicked restart button");
             } else if (this.getAttribute("id") === "exit") {
                 alert("You clicked exit button");
             } else if (this.getAttribute("id") === "button-one") {
@@ -97,6 +98,7 @@ function displayTheWinner(sumPlayer, sumCpu) {
 
 /**
  * Gets the current player score from DOM and increments it by 1
+ * and when player score reach 11 point it will display message
  */
 function incrementPlayerScore() {
     let playerScore = parseInt(document.getElementById("palyer-score").innerText);
@@ -108,6 +110,7 @@ function incrementPlayerScore() {
 
 /**
  * Gets the current CPU score from DOM and increments it by 1
+ * and when CPU score reach 11 point it will display message
  */
 function incrementCpuScore() {
     let cpuScore = parseInt(document.getElementById("cpu-score").innerText);
@@ -131,4 +134,14 @@ function displayWinnerMessage() {
 function displayLooserMessage() {
     let winnerMessage = document.getElementById("looser");
     winnerMessage.style.display = "block";
+}
+
+/**
+ * This function will reset the score for player and the computer
+ */
+function resetTheScore() {
+    let cpuScore = document.getElementById("cpu-score");
+    cpuScore.innerHTML = "0";
+    let playerScore = document.getElementById("palyer-score");
+    playerScore.innerHTML = "0";
 }
