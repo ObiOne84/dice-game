@@ -8,7 +8,6 @@
 
 body {
     color: darkslategrey;
-    /* color: #8b0000; */
 }
 
 h1 {
@@ -33,6 +32,22 @@ p {
 
 #logo img {
     height: 64px;
+}
+
+/* Style hero image */
+#hero-image {
+    height: 35vh;
+    width: 100%;
+    text-align: center;
+}
+
+#video-dice {
+    height: 100%;
+    width: 100%;
+}
+
+#game-info {
+    height: 35vh;
 }
 
 /* Style game area */
