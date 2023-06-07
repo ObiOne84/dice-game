@@ -10,15 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("id") === "restart") {
                 resetTheScore();
             } else if (this.getAttribute("id") === "exit") {
-                alert("You clicked exit button");
+                // window.location.assign("../first.html"); // https://www.w3schools.com/jsref/met_loc_assign.asp
+                window.location.replace("../first.html"); //https://www.w3schools.com/jsref/met_loc_replace.asp
             } else if (this.getAttribute("id") === "button-one") {
                 returnToTheGame();
                 resetTheScore();
-                // alert("You clicked play again");
             } else if (this.getAttribute("id") === "button-two") {
                 returnToTheGame();
                 resetTheScore();
-                // alert("You clicked play again");
             }
         });
     }
