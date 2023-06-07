@@ -24,10 +24,10 @@ p {
 
 /* Style logo */
 #logo {
-    height: 10%;
+    /* height: 7%; */
     text-align: center;
-    font-size: 200%;
-    margin: 2.5% auto;
+    font-size: 170%;
+    margin: 1.5% auto;
 }
 
 #logo img {
@@ -36,9 +36,10 @@ p {
 
 /* Style hero image */
 #hero-image {
-    height: 35vh;
+    height: 40vh;
     width: 100%;
     text-align: center;
+    border-top: 2px solid darkcyan;
 }
 
 #video-dice {
@@ -48,10 +49,29 @@ p {
 
 #game-info {
     height: 35vh;
+
 }
+
+/* Style about game section */
+#info-holder {
+    display: flex;
+    flex-direction: row;
+    background-color: darkcyan;
+    height: 35vh;
+    justify-content: space-evenly;
+}
+
+.user-data {
+    width: 40%;
+    height: 90%;
+    background-color: yellow;
+    margin: auto 5%;
+}
+
 
 /* Style game area */
 #game-area {
+    /* height: 22vw; */
     height: 22vw;
     width: 100%;
     margin-top: 2.5%;
