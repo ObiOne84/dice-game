@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("id") === "button-two") {
                 returnToTheGame();
                 resetTheScore();
+            } else if (this.getAttribute("id") === "play") {
+                window.location.replace("../index.html");
             }
         });
     }
