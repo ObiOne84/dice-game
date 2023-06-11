@@ -1,5 +1,6 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
+// Source - javascript walktrough project - Code Institute
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -27,21 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("left").innerHTML = pName;
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let rollDice = document.getElementById("roll-dice");
-
-//     rollDice.addEventListener("click", function () {
-//         if (this.getAttribute("id") === "roll-dice") {
-//             rollTheDice();
-//         } else if (this.getAttribute("id") === "restart") {
-//             alert("You clicked restart button");
-//         } else if (this.getAttribute("id") === "exit") {
-//             alert("You clicked exit button");
-//         } else if (this.getAttribute("class") === "play-again") {
-//             alert("You clicked play again");
-//         }
-//     });
-// });
 
 /**
  * Function replace images by generating random number between one and six
@@ -49,28 +35,61 @@ document.addEventListener("DOMContentLoaded", function () {
 function rollTheDice() {
 
     let num1 = Math.floor(Math.random() * 6) + 1;
-    let image1 = new Image();
-    image1.src = "./assets/images/dice-" + num1 + ".png";
+    // let image1 = new Image();
+    // image1.src = "./assets/images/dice-" + num1 + ".png";
     let num2 = Math.floor(Math.random() * 6) + 1;
-    let image2 = new Image();
-    image2.src = "./assets/images/dice-" + num2 + ".png";
+    // let image2 = new Image();
+    // image2.src = "./assets/images/dice-" + num2 + ".png";
     let num3 = Math.floor(Math.random() * 6) + 1;
-    let image3 = new Image();
-    image3.src = "./assets/images/dice-" + num3 + ".png";
+    // let image3 = new Image();
+    // image3.src = "./assets/images/dice-" + num3 + ".png";
     let num4 = Math.floor(Math.random() * 6) + 1;
+    // let image4 = new Image();
+    // image4.src = "./assets/images/dice-" + num4 + ".png";
+
+    // let sumPlayer = num1 + num2;
+    // let sumCpu = num3 + num4;
+    let sumPlayer = [];
+    let sumCpu = [];
+
+    if (num1 === num2 && num3 !== num4) {
+        sumPlayer = (num1 + num2) * 2;
+        sumCpu = num3 + num4;
+    } else if (num1 !== num2 && num3 === num4) {
+        sumPlayer = num1 + num2;
+        sumCpu = (num3 + num4) * 2;
+    } else if (num1 === num2 && num3 === num4) {
+        sumPlayer = (num1 + num2) * 2;
+        sumCpu = (num3 + num4) * 2;
+    } else {
+        sumPlayer = num1 + num2;
+        sumCpu = num3 + num4;
+    }
+
+
+    // document.getElementsByTagName("img")[1].replaceWith(image1);
+    // document.getElementsByTagName("img")[2].replaceWith(image2);
+    // document.getElementsByTagName("img")[3].replaceWith(image3);
+    // document.getElementsByTagName("img")[4].replaceWith(image4);
+
+    replaceImage(num1, num2, num3, num4);
+    displayTheRollResult(sumPlayer, sumCpu);
+    displayTheWinner(sumPlayer, sumCpu);
+}
+
+function replaceImage(num1, num2, num3, num4) {
+    let image1 = new Image();
+    let image2 = new Image();
+    let image3 = new Image();
     let image4 = new Image();
+    image1.src = "./assets/images/dice-" + num1 + ".png";
+    image2.src = "./assets/images/dice-" + num2 + ".png";
+    image3.src = "./assets/images/dice-" + num3 + ".png";
     image4.src = "./assets/images/dice-" + num4 + ".png";
-
-    let sumPlayer = num1 + num2;
-    let sumCpu = num3 + num4;
-
     document.getElementsByTagName("img")[1].replaceWith(image1);
     document.getElementsByTagName("img")[2].replaceWith(image2);
     document.getElementsByTagName("img")[3].replaceWith(image3);
     document.getElementsByTagName("img")[4].replaceWith(image4);
-
-    displayTheRollResult(sumPlayer, sumCpu);
-    displayTheWinner(sumPlayer, sumCpu);
 }
 
 function displayTheRollResult(sumPlayer, sumCpu) {
@@ -78,7 +97,6 @@ function displayTheRollResult(sumPlayer, sumCpu) {
     document.getElementById("player-field").innerText = `${pName} scored ${sumPlayer} points!`;
     document.getElementById("cpu-field").innerText = `CPU scored ${sumCpu} points!`;
 }
-
 
 function displayTheWinner(sumPlayer, sumCpu) {
     if (sumPlayer === sumCpu) {
@@ -158,13 +176,13 @@ function returnToTheGame() {
 
 /**
  * Check it the player name field has value
+ * add player name to local storage
  */
 function checkPlayerName() {
     let playerName = document.getElementById("pname").value;
     if (playerName) {
         localStorage.setItem("pname", playerName);
         window.location.replace("../index.html");
-
     } else {
         alert("Choose Your Name!");
     }
