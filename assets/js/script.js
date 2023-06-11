@@ -2,7 +2,6 @@
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("id") === "roll-dice") {
@@ -11,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 resetTheScore();
             } else if (this.getAttribute("id") === "exit") {
                 // window.location.assign("../first.html"); // https://www.w3schools.com/jsref/met_loc_assign.asp
-                window.location.replace("../first.html"); //https://www.w3schools.com/jsref/met_loc_replace.asp
+                window.location.replace("../first.html");
+                //https://www.w3schools.com/jsref/met_loc_replace.asp
             } else if (this.getAttribute("id") === "button-one") {
                 returnToTheGame();
                 resetTheScore();
@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 returnToTheGame();
                 resetTheScore();
             } else if (this.getAttribute("id") === "play") {
-                window.location.replace("../index.html");
+                checkPlayerName();
             }
         });
     }
+    let pName = localStorage.getItem('pname');
+    document.getElementById("left").innerHTML = pName;
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -69,21 +71,11 @@ function rollTheDice() {
 
     displayTheRollResult(sumPlayer, sumCpu);
     displayTheWinner(sumPlayer, sumCpu);
-
-    // document.getElementById("player-field").innerText = `Player One score ${num1 + num2} points!`;
-    // document.getElementById("cpu-field").innerText = `The CPU score ${sumCpu} points!`;
-
-    // if (sumPlayer === sumCpu) {
-    //     return document.getElementById("message").innerHTML = "DRAW!";
-    // } else if (sumPlayer > sumCpu) {
-    //     return document.getElementById("message").innerHTML = "Player WINS!";
-    // } else {
-    //     return document.getElementById("message").innerHTML = "CPU WINS!";
-    // }
 }
 
 function displayTheRollResult(sumPlayer, sumCpu) {
-    document.getElementById("player-field").innerText = `Player One scored ${sumPlayer} points!`;
+    let pName = localStorage.getItem('pname');
+    document.getElementById("player-field").innerText = `${pName} scored ${sumPlayer} points!`;
     document.getElementById("cpu-field").innerText = `CPU scored ${sumCpu} points!`;
 }
 
@@ -92,7 +84,8 @@ function displayTheWinner(sumPlayer, sumCpu) {
     if (sumPlayer === sumCpu) {
         return document.getElementById("message").innerHTML = "DRAW!";
     } else if (sumPlayer > sumCpu) {
-        document.getElementById("message").innerHTML = "Player WINS!";
+        let pName = localStorage.getItem('pname');
+        document.getElementById("message").innerHTML = `${pName} WINS!`;
         return incrementPlayerScore();
     } else {
         document.getElementById("message").innerHTML = "CPU WINS!";
@@ -156,10 +149,23 @@ function resetTheScore() {
 /** 
  * Function will unhide the message for the winner and allow to return to the game
  */
-
 function returnToTheGame() {
     let winnerMessage = document.getElementById("winner");
     winnerMessage.style.display = "none";
     let looserMessage = document.getElementById("looser");
     looserMessage.style.display = "none";
+}
+
+/**
+ * Check it the player name field has value
+ */
+function checkPlayerName() {
+    let playerName = document.getElementById("pname").value;
+    if (playerName) {
+        localStorage.setItem("pname", playerName);
+        window.location.replace("../index.html");
+
+    } else {
+        alert("Choose Your Name!");
+    }
 }

@@ -64,7 +64,8 @@ p {
 .user-data {
     width: 30%;
     height: 90%;
-    background-color: #003f3f;
+    /* background-color: #003f3f; */
+    background-color: #005858;
     margin: auto 10%;
     text-align: center;
     align-items: center;
@@ -84,7 +85,7 @@ p {
 #start-game {
     /* background-color: #00468b; */
     /* background-color: #8b0000; */
-    background-color: #005858;
+    /* background-color: #005858; */
     /* background-color: #003f3f; */
     color: white;
 }
