@@ -57,20 +57,29 @@ p {
     display: flex;
     flex-direction: row;
     background-color: darkcyan;
-    height: 35vh;
+    height: 40vh;
     justify-content: space-evenly;
 }
 
 .user-data {
-    width: 30%;
+    width: 35%;
     height: 90%;
-    /* background-color: #003f3f; */
-    background-color: #005858;
-    margin: auto 10%;
-    text-align: center;
-    align-items: center;
+    background-color: #003f3f;
+    /* background-color: #005858; */
+    margin: auto 7.5%;
+    /* text-align: center;
+    align-items: center; */
     border-radius: 15px;
     color: white;
+}
+
+#about-game h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content {
+    margin-left: 5px;
 }
 
 .login {
@@ -88,6 +97,8 @@ p {
     /* background-color: #005858; */
     /* background-color: #003f3f; */
     color: white;
+    align-items: center;
+    text-align: center;
 }
 
 #start-game label {
@@ -205,10 +216,7 @@ p {
     border: 1px solid white;
 }
 
-
-
 /* Add style to score area */
-
 #results-area {
     height: 30vw;
 }
