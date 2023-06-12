@@ -77,11 +77,12 @@ p {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 5px;
+    /* padding: 5px; */
+    margin-top: 5%;
 }
 
 .content {
-    margin-left: 5px;
+    margin-left: 10px;
     padding: 3px;
 }
 
@@ -104,14 +105,43 @@ p {
     text-align: center;
 }
 
-#start-game label {
+#label {
     margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #pname {
     width: 50%;
     text-align: center;
     border: 1px solid black;
+}
+
+/* style footer "Love Running" tutorial */
+footer {
+    height: 25px;
+    line-height: 25px;
+    /* overflow: hidden; */
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media>li {
+    display: inline;
+
+}
+
+.social-media i {
+    font-size: 100%;
+    margin: 2%;
+    padding: 1%;
+    color: #005858;
+}
+
+.social-media i:hover {
+    color: #eb5e28;
 }
 
 
