@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 resetTheScore();
             } else if (this.getAttribute("id") === "exit") {
                 // window.location.assign("../first.html"); // https://www.w3schools.com/jsref/met_loc_assign.asp
-                window.location.replace("../first.html");
+                localStorage.clear();
+                window.location.replace("../index.html");
                 //https://www.w3schools.com/jsref/met_loc_replace.asp
             } else if (this.getAttribute("id") === "button-one") {
                 returnToTheGame();
@@ -182,7 +183,7 @@ function checkPlayerName() {
     let playerName = document.getElementById("pname").value;
     if (playerName) {
         localStorage.setItem("pname", playerName);
-        window.location.replace("../index.html");
+        window.location.replace("../game.html");
     } else {
         alert("Choose Your Name!");
     }

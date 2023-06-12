@@ -76,10 +76,13 @@ p {
 #about-game h2 {
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px;
 }
 
 .content {
     margin-left: 5px;
+    padding: 3px;
 }
 
 .login {

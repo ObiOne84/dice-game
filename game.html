@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roll Dices Game">
+    <meta name="keywords" content="dice game, roll dice, online game">
+    <meta name="author" content="Szymon Stepien">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link type="image/png" sizes="96x96" rel="icon" href="assets/images/roll-dice-icon.png">
+    <title>Roll Dice Game</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <h1><img src="assets/images/roll-dice-icon.png" alt="logo"> ROLL DICES GAME!</h1>
+        </div>
+    </header>
+    <!-- Game area -->
+    <section id="game-area">
+        <span id="left">Player</span>
+        <span id="right">CPU</span>
+        <div id="game-box">
+            <div id="player-zone">
+                <div class="holder" id="dice-one"><img id="image-one" src="assets/images/dice-4.png"></div>
+                <div class="holder" id="dice-two"><img src="assets/images/dice-6.png"></div>
+            </div>
+            <div id="cpu-zone">
+                <div class="holder" id="dice-three"><img src="assets/images/dice-5.png"></div>
+                <div class="holder" id="dice-four"><img src="assets/images/dice-3.png"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Winner and looser message area -->
+    <section>
+        <div id="game-over">
+            <div class="end-game-message" id="winner">
+                <h2 class="message-to-player"><img src="assets/images/trophy.png" alt="Winner trophy cup."
+                        class="reward"><br>Congratulation! You won!</h2>
+                <button class="buttons play-again" id="button-one">New game!</button>
+            </div>
+            <div class="end-game-message" id="looser">
+                <h2 class="message-to-player"><img src="assets/images/medal.png" alt="Looser medal."
+                        class="reward"><br>You
+                    loose! Better luck next time!</h2>
+                <button class="buttons play-again" id="button-two">New game!</button>
+            </div>
+        </div>
+    </section>
+    <!-- Control area -->
+    <section id="control-area">
+        <div id="control-box">
+            <div><button class="buttons" id="restart">Restart</button></div>
+            <div id="roll-button"><button class="buttons" id="roll-dice">Roll Dice!</button></div>
+            <div><button class="buttons" id="exit">Exit</button></div>
+        </div>
+    </section>
+    <!-- Result area -->
+    <section id="results-area">
+        <div id="results-message">
+            <div class="dice-roll-result">
+                <h2 id="player-field"></h2>
+            </div>
+            <div class="dice-roll-result">
+                <h2 id="cpu-field"></h2>
+            </div>
+        </div>
+        <div id="score-holder">
+            <div class="score-boxes" id="player-area">
+                <h2><span id="palyer-score">0</span><br><span id="player-name">Player</span><br>Win</h2>
+            </div>
+            <div id="message-box">
+                <h3 id="message"></h3>
+            </div>
+            <div class="score-boxes" id="cpu-area">
+                <h2><span id="cpu-score">0</span><br>CPU<br>Win</h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
