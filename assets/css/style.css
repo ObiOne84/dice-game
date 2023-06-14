@@ -36,7 +36,7 @@ p {
 
 /* Style hero image */
 #hero-image {
-    height: 40vh;
+    height: 400px;
     width: 100%;
     text-align: center;
     border-top: 2px solid #003f3f;
@@ -48,7 +48,7 @@ p {
 }
 
 #game-info {
-    height: 40vh;
+    height: 400px;
 
 }
 
@@ -62,7 +62,7 @@ p {
 }
 
 .user-data {
-    width: 35%;
+    width: 40%;
     height: 90%;
     background-color: #003f3f;
     /* background-color: #005858; */
@@ -83,9 +83,13 @@ p {
     padding: 0;
 }
 
+/* #label {
+    margin-top: 5%;
+} */
+
 .content {
     margin-left: 10px;
-    /* padding: 1px; */
+    padding: 1px;
     letter-spacing: 1px;
 
 }
@@ -129,14 +133,15 @@ p {
     background-color: #edffff;
 }
 
-/* #enjoy {
-    margin-top: 5px;
-} */
+#enjoy {
+    margin-top: 3px;
+    text-align: center;
+}
 
 /* style footer "Love Running" tutorial */
 footer {
-    height: 10vh;
-    line-height: 10vh;
+    height: 100px;
+    line-height: 100px;
     /* overflow: hidden; */
 }
 
@@ -342,13 +347,17 @@ footer {
 /* media query */
 
 /* for screen size 1024px and below */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1024px) {
 
     /* style main page */
+    #game-info {
+        height: 350px;
+    }
+
     .user-data {
-        width: 42.5%;
-        height: 92.5%;
-        margin: auto 3.75%;
+        width: 45%;
+        height: 90%;
+        margin: auto 2.5%;
     }
 
     .content {
@@ -443,7 +452,7 @@ footer {
 
     /* style main page */
     #game-info {
-        height: 70vh;
+        height: 600px;
     }
 
     #info-holder {
@@ -514,7 +523,7 @@ footer {
     }
 
     #label {
-        margin-top: 15%;
+        margin-top: 12.5%;
     }
 
     #pname {
@@ -569,6 +578,10 @@ footer {
 /* for screen size 330px and below */
 @media screen and (max-width: 330px) {
     #game-info {
-        height: 75vh;
+        height: 700px;
+    }
+
+    #label {
+        margin-top: 22.5%;
     }
 }
