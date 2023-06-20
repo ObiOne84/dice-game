@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 resetTheScore();
             } else if (this.getAttribute("id") === "play") {
                 checkPlayerName();
+            } else if (this.getAttribute("id") === "ok") {
+                hidePopUpMessage();
             }
         });
     }
@@ -189,6 +191,24 @@ function checkPlayerName() {
         localStorage.setItem("pname", playerName);
         window.location.replace("../game.html");
     } else {
-        alert("Choose Your Name!");
+        displayPopUpMessage();
     }
+}
+
+// Function hide pop-up message
+
+function hidePopUpMessage() {
+    let hideMessage = document.getElementById("animation-box");
+    let popUpWindow = document.getElementById("pop-up");
+    hideMessage.style.display = "none";
+    popUpWindow.style.display = "none";
+}
+
+// Function to dispaly pop-up message
+
+function displayPopUpMessage() {
+    let hideMessage = document.getElementById("animation-box");
+    let popUpWindow = document.getElementById("pop-up");
+    hideMessage.style.display = "block";
+    popUpWindow.style.display = "block";
 }

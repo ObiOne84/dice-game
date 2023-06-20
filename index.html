@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <div id="gray-box">
+    </div>
     <!-- Header -->
     <header>
         <div id="logo">
@@ -25,12 +27,10 @@
         <div id="hero-image">
             <video id="video-dice" autoplay muted loop src="assets/video/rolling-dice.mp4"></video>
         </div>
-        <div>
-
-        </div>
-
     </section>
+
     <section id="game-info">
+
         <div id="info-holder">
             <div class="user-data" id="about-game">
                 <h2>About the game</h2>
@@ -51,10 +51,12 @@
                 <!-- <label id="label" class="login" for="pname">Choose Your Name!</label> -->
                 <h2 id="label">Choose your name!</h2>
                 <input class="login" type="text" name="player-name" id="pname" placeholder="Choose your name">
-                <button class="buttons login" type="submit" id="play">Play!</button>
+                <button class="buttons login" id="play" type="submit">Play!</button>
                 <!-- <input class="buttons login" type="submit" id="play" value="Play!" name="play"> -->
             </div>
-            <div>
+        </div>
+        <div>
+
     </section>
     <footer>
         <ul class="social-media">
@@ -80,7 +82,12 @@
             </li>
         </ul>
     </footer>
+    <!-- Animation pop-up box -->
 
+    <div class="user-data" id="pop-up">
+        <h2 class="choose-name">Choose your name!</h2>
+        <button class="buttons login" type="submit" id="ok">OK!</button>
+    </div>
 
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/9aa342e9e5.js" crossorigin="anonymous"></script>
